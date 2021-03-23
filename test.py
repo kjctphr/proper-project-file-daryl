@@ -1,8 +1,5 @@
-user_input = input("input")
-if user_input == "Q":
-    exit()
-    print("bye")
-else:
+i = input("i:")
+while i is not in ("1" , "2"):
     print("hi")
-
-print("HIIIII")
+    i = input("i:")
+print("yes")

@@ -36,10 +36,13 @@ def change_password(id_no,pwd):
     print("Change password")
     print("")
     old_pwd = input("Please enter the old password for the student:")
-    new_pwd = input("Please enter the new password for the student:")
     while old_pwd != pwd:
         print("Old password entered is wrong")
         old_pwd = input("Please enter again!:")
+    new_pwd = input("Please enter the new password for the student:")
+    while len(new_pwd) < 4:
+        print("The minimum length of the new password is 4.")
+        print("Please reenter.")
     student_index = find_element(id_no,student_list)
     student_list[student_index][2] = new_pwd
     with open('student.txt', 'w') as file:

@@ -9,6 +9,7 @@ import os
 def main():
     while 1:
         print("Welcome to the UTAR SMART Student Management & Attendance Registration Technology")
+        print("Enter [Q] whenever you would like to quit the program")
         print("")
         print("1. Login as student")
         print("2. Login as admin")
@@ -43,8 +44,8 @@ def auth_admin():
     print("")
     print("Admin Login")
     print("")
-    username = input(str("Username : "))
-    password = input(str("Password : "))
+    username = input("Username : ")
+    password = input("Password : ")
     if username == "admin":
         if password == "password":
             admin_session()
@@ -58,7 +59,7 @@ def student_session():
     print("")
     print("1. View attendance")
     print("2. Change password")
-    user_option = input(str("Option : "))
+    user_option = input("Option : ")
     if user_option == "1":
         view_attendance(id_no)
     elif user_option == "2":
@@ -73,9 +74,8 @@ def admin_session():
     print("1.CRUD Student data")
     print("2.CRUD course")
     print("3.CRUD Student Attendance")
-    print("4.Generate Bar List")
-    print("5.Generate 100% attendance report")
-    user_option = input(str("Option : "))
+    print("4.Generate report")
+    user_option = input("Option : ")
     if user_option == "1":
         student_data()
     elif user_option == "2":
@@ -83,9 +83,9 @@ def admin_session():
     elif user_option == "3":
         attendance()
     elif user_option == "4":
-        barlist()
-    elif user_option == "5":
-        full_attendance()
+        report()
+    elif user_option == "Q":
+        pass
     else:
         print("No valid option was selected")
         os.system('cls')

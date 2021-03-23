@@ -1,6 +1,17 @@
 import os
 import glob
 from mymodules import *
+def report():
+    print("")
+    print("1.Bar List ")
+    print("2.100 % attendance report")
+    user_option = input(str("Option : ")).upper()
+    if user_option == "1":
+        barlist()
+    elif user_option == "2":
+        full_attendance()
+    elif user_option == "Q":
+        pass
 
 
 def barlist():
